@@ -12,10 +12,6 @@ public class Fox extends Animal{
         this.strength = 3;
         this.name = "Fox";
     }
-    /*Wolf(int posX, int posY, World& world, int strength) : Animal(posX, posY, world, strength) {
-        this.initiative = 5;
-        this.symbol = 'W';
-    }*/
 
     @Override
     public boolean action() {
