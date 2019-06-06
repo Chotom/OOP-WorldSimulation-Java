@@ -23,7 +23,7 @@ public abstract class Plant extends Organism {
             boolean possiblePlant[] = tryMove(1, this.getPosX(), this.getPosY());
             boolean freePosition = false;
 
-            //finding place to born
+            //finding place to reproduce
             for(int i = 0; i < 4; i++) if(possiblePlant[i] == true) freePosition = true;
 
             if (!freePosition) return false;
@@ -41,8 +41,8 @@ public abstract class Plant extends Organism {
                 }
                 else continue;
             }
-           // System.out.println(this.getName());
-            //add seed to world
+
+            //add plant to world
 
             world.addOrganism(this.reproduce((this.getPosX() + plantX), (this.getPosY() + plantY)));
             world.setInformation(2, world.getOrganism((this.getPosX() + plantX), (this.getPosY() + plantY)), null);
